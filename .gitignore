@@ -1,0 +1,5 @@
+# compiled output - never commit binaries
+*.exe
+*.o
+*.out
+a.out
