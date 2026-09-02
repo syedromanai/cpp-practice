@@ -1,77 +1,30 @@
-# Password Checker
+# C++ Practice
 
-A command-line password validator written in C++. Takes a password as input and
-checks it against three rules, reporting the first rule it fails.
+Working through C++ from the ground up, one project per folder. Each has its own
+README with what it does, how to build it, and what it taught me.
 
-Built as the checkpoint project for the first four chapters of the Codédex C++
-course — variables, control flow, and loops.
+Studying toward embedded systems and edge AI — C++ is the language of that work,
+so this repo is where the fundamentals get built before they get useful.
 
-## Rules
+## Projects
 
-A valid password must:
+| | Project | Concepts | Course stage |
+|---|---|---|---|
+| 01 | [Password Checker](01-password-checker) | strings, loops, bool flags, ASCII comparison, conditionals | Chapters 1–4 checkpoint |
 
-- Be at least **8 characters** long
-- Contain at least **one number** (`0`–`9`)
-- Contain at least **one special character** (`!` `@` `#` `%` `^`)
+## Build anything here
 
-## Build and run
+Each project is a single translation unit, so no build system is needed:
 
 ```bash
+cd 01-password-checker
 g++ password_checker.cpp -o password_checker
 ./password_checker
 ```
 
-On Windows with MinGW:
+## Course
 
-```bash
-g++ password_checker.cpp -o password_checker.exe
-password_checker.exe
-```
+[Codédex C++](https://www.codedex.io/cpp) — 10 chapters, ending with pointers
+and references. Projects land here as I reach them.
 
-## Example
-
-```
-===================
-Password Checker 🔐
-===================
-
-Enter a password: hello
-
-❌ Password must be at least 8 characters.
-```
-
-```
-===================
-Password Checker 🔐
-===================
-
-Enter a password: hello123!
-
-✅ Valid password!
-```
-
-## How it works
-
-The program loops through the password once, character by character, setting two
-flags: `hasNumber` and `hasSpecialCharacter`. Characters are compared directly
-against their ASCII ranges — `password[i] >= '0' && password[i] <= '9'` catches
-any digit without needing a library function.
-
-After the loop, the three rules are checked in order of importance: length
-first, then the number, then the special character. Only the first failure is
-reported, so the user fixes one thing at a time rather than being handed a list.
-
-## Concepts used
-
-- `std::string` and indexing individual characters
-- `for` loop with a counter
-- `bool` flags to carry state out of a loop
-- Character comparison using ASCII ordering
-- `if` / `else if` / `else` chains
-- Console I/O with `std::cin` and `std::cout`
-
-## Notes
-
-`std::cin >> password` reads up to the first whitespace, so passwords
-containing spaces are truncated. Fine for this exercise; `std::getline` would be
-the fix if spaces were allowed.
+**Progress:** 2 of 10 chapters complete.
