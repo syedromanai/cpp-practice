@@ -12,6 +12,7 @@ so this repo is where the fundamentals get built before they get useful.
 |---|---|---|---|
 | 01 | [Password Checker](01-password-checker) | strings, loops, bool flags, ASCII comparison, conditionals | Chapters 1-4 checkpoint |
 | 02 | [Temperature Converter](02-temperature-converter) | doubles vs ints, functions with return values, char input, output formatting | Post-course practice |
+| 03 | [Sensor Stats](03-sensor-stats) | vectors, range-based for, passing by const reference, guarding empty input | Post-course practice |
 
 ## Build anything here
 
